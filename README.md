@@ -1,0 +1,2 @@
+# bashing
+learning bash dump
