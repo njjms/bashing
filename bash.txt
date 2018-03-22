@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# Comment
+
+echo "Hello World"
+
+rand=5
+
+let rand+=4
+echo "$rand"
+
+echo "rand++ = $((rand++))"
+echo "++rand = $((++rand))"
+echo "rand-- = $((rand--))"
+echo "--rand = $((--rand))"
+
+# if you put the ++ after, it will print then evaluate. Before, evaluate then print.
+
+# we can call python functions inside our shell script
+num7=1.2
+num8=3.4
+num9=$(python -c "print $num7+$num8")
+echo $num9
+
+# we can print out information over multiple lines as well
+cat<< END
+This text
+prints on 
+many lines
+END
+
+

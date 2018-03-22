@@ -1,0 +1,41 @@
+#!/bin/bash
+
+read -p "How old are you? " age
+
+if [ $age -ge 16 ] 
+then
+	echo "You can drive"
+elif [ $age -eq 15 ]
+then
+	echo "You can drive next year"
+else
+	echo "You can't drive"
+fi
+
+read -p "Enter a number : " num
+if ((num == 10))
+then
+	echo "Your number equals 10"
+fi
+
+if ((num > 10)); then
+	echo "It is greater than 10
+else
+	echo "It is less than 10"
+fi
+
+if (( ((num % 2)) == 0)); then
+	echo "It is even."
+fi
+
+if (( ((num > 0)) && ((num < 11)) )); then
+	echo "Your number is between 0 and 10"
+fi
+
+# Here's how you can go into a new file from a vim file
+
+touch samp_file && vim samp_file
+
+# And here is how you can see if a folder exists and if it doesn't exist,
+# create it.
+[ -d samp_dir ] || mkdir samp_dir
